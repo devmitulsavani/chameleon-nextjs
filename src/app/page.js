@@ -1,113 +1,69 @@
 import Image from 'next/image'
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <>
+    <section className="container">
+      <div className="flex flex-wrap -mx-4 items-center">
+        <div className="w-full lg:w-1/2 px-4 lg:order-1">
+          <Image src="/indexBanner.svg" alt="" width={2000} height={2000}  className="max-w-[480px] lg:max-w-full mx-auto w-full" />
+        </div>
+        <div className="w-full lg:w-1/2 px-4 pt-10 lg:pt-0">
+          <div className="text-center lg:text-left max-w-[500px] mx-auto lg:mx-0">
+            <span className="uppercase text-lg bg-white bg-opacity-80 rounded-[10px] inline-block px-6 py-3">Think big & be
+              creative</span>
+            <h1
+              className="mt-4 lg:text-left font-medium capitalize text-5xl">
+              We are an excellent <span className="mt-3 inline-block text-secondary text-[50px] leading-[59px] sm:text-[60px] sm:leading-[69px] lg:text-[70px] lg:leading-[79px] xl:text-[74px] xl:leading-[79px]">web agency</span></h1>
+            <p className="text-lg lg:text-left mt-5">We are the ideal technology partner for providing scalable businesses with custom web development services.</p>
+            <ul className="text-[#A9A9A9] flex items-center justify-center lg:justify-start space-x-[20px] mt-9">
+              <li><Link href="/contact"
+                  className="text-white uppercase bg-secondary text-sm font-medium font-heading px-7 py-4 inline-block rounded-[10px] hover:bg-transparent hover:text-secondary duration-300 border border-secondary">contact
+                  us</Link></li>
+              <li><Link href="https://www.instagram.com/chameleoninfotech/" target="_blank" className="inline-block hover:text-secondary duration-300"><svg width="25" height="26"
+                    viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clipPath="url(#clip0_96_272)">
+                      <path
+                        d="M8.75113 0C11.2472 0 13.7433 0 16.2393 0C16.824 0.0357003 17.4088 0.0663005 17.9935 0.102001C19.0155 0.163201 20.0178 0.346803 20.9563 0.785406C23.2608 1.86151 24.4744 3.77913 24.8527 6.31895C24.9215 6.76775 24.951 7.22166 25.0001 7.67556C25.0001 11.164 25.0001 14.6524 25.0001 18.1408C24.9854 18.2581 24.9707 18.3754 24.9559 18.4876C24.8871 19.0588 24.8626 19.6352 24.7496 20.1962C24.2533 22.6799 22.9021 24.4445 20.5976 25.3778C19.497 25.8215 18.3325 25.9439 17.1631 25.9592C14.5147 25.9847 11.8614 26.0153 9.213 26C7.91092 25.9949 6.60392 25.9898 5.32149 25.6634C3.24799 25.1432 1.70514 23.9192 0.791224 21.9047C0.226169 20.6654 0.054196 19.3292 0.0394554 17.9776C0.0148878 15.1624 -0.0145933 12.3472 0.0099743 9.53707C0.0198013 8.35386 0.0885906 7.16556 0.25565 5.99765C0.516067 4.17693 1.36119 2.66732 2.79594 1.55041C4.02432 0.591605 5.44924 0.214202 6.95278 0.102001C7.54732 0.0612005 8.15168 0.0357003 8.75113 0ZM12.5296 23.7152C12.5296 23.6999 12.5296 23.6897 12.5296 23.6744C13.188 23.6744 13.8514 23.6948 14.5098 23.6693C15.9249 23.6183 17.3547 23.6336 18.7551 23.45C20.6812 23.2001 21.9882 22.0526 22.4648 20.0585C22.6564 19.2526 22.7203 18.4009 22.735 17.5696C22.7792 14.9533 22.7891 12.337 22.7743 9.72068C22.7694 8.66497 22.7203 7.60416 22.5925 6.55355C22.337 4.47273 21.0792 3.06002 19.0941 2.64692C18.2391 2.46842 17.3449 2.41742 16.4703 2.40212C14.2788 2.36642 12.0825 2.37152 9.88615 2.37662C8.63321 2.38172 7.37043 2.36642 6.12731 2.59082C4.23069 2.93762 2.92861 4.18713 2.53552 6.15575C2.36846 7.00235 2.31442 7.88466 2.29476 8.75167C2.25054 10.8325 2.2358 12.9184 2.26037 14.9992C2.27511 16.468 2.31442 17.947 2.44708 19.4108C2.57975 20.8388 3.22833 22.022 4.43706 22.7972C5.2527 23.3225 6.17153 23.5316 7.11493 23.5673C8.9231 23.6336 10.7264 23.6693 12.5296 23.7152Z"
+                        fill="currentColor" />
+                      <path
+                        d="M6.07801 13C6.08292 9.30758 8.9819 6.31386 12.5295 6.32916C16.0967 6.34446 18.976 9.34838 18.9514 13.0255C18.9269 16.7179 16.0574 19.6913 12.5147 19.6913C8.96225 19.6862 6.0731 16.6873 6.07801 13ZM8.34806 13.0051C8.34314 15.4021 10.2005 17.335 12.5098 17.3401C14.8192 17.3452 16.6814 15.4276 16.6912 13.0306C16.701 10.6234 14.8388 8.68538 12.5196 8.68538C10.2054 8.68028 8.34806 10.603 8.34806 13.0051Z"
+                        fill="currentColor" />
+                      <path
+                        d="M19.2413 4.50843C20.0815 4.52373 20.7301 5.22754 20.7056 6.10475C20.6859 6.96155 20.0128 7.62966 19.1775 7.61946C18.3471 7.60926 17.6887 6.89015 17.7083 6.01805C17.7231 5.16634 18.4109 4.49313 19.2413 4.50843Z"
+                        fill="currentColor" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_96_272">
+                        <rect width="25" height="26" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg></Link></li>
+              <li><Link href="https://www.linkedin.com/company/chameleon-infotech/" target="_blank" className="inline-block hover:text-secondary duration-300"><svg width="26" height="26"
+                    viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clipPath="url(#clip0_96_277)">
+                      <path
+                        d="M2.23477 0C9.41159 0 16.5884 0 23.7652 0C23.8035 0.0127701 23.8355 0.0383104 23.8802 0.0446955C24.4995 0.172397 25.0039 0.485265 25.4126 0.964145C25.7254 1.33448 25.8787 1.77505 26.0064 2.22839C26.0064 9.40521 26.0064 16.582 26.0064 23.7588C25.9936 23.7908 25.9681 23.8163 25.9617 23.8482C25.6871 25.1508 24.6591 25.9936 23.3247 25.9936C16.4416 25.9936 9.56483 25.9936 2.68173 25.9936C2.44548 25.9936 2.20923 25.9681 1.97937 25.9106C0.785363 25.6105 0 24.5697 0 23.2927C0 16.4288 0 9.56483 0 2.70088C0 2.62426 0 2.54764 0.00638507 2.47102C0.0510805 1.74951 0.351179 1.14931 0.887524 0.657662C1.27701 0.306483 1.74312 0.134086 2.23477 0ZM14.3026 22.086C14.3026 21.9519 14.3026 21.8561 14.3026 21.7539C14.3026 19.6532 14.3026 17.5589 14.3026 15.4583C14.3026 15.2986 14.3089 15.139 14.3217 14.9794C14.4239 13.8492 15.6817 13.0128 16.7544 13.3448C17.6611 13.6257 18.1911 14.36 18.1911 15.3497C18.1974 17.4887 18.1911 19.6341 18.1911 21.7731C18.1911 21.8752 18.1911 21.971 18.1911 22.0796C19.5064 22.0796 20.7834 22.0796 22.0796 22.0796C22.086 22.0093 22.086 21.9519 22.086 21.8944C22.086 19.5 22.0923 17.1056 22.086 14.7112C22.0796 13.3065 21.5305 12.138 20.4641 11.2441C18.7083 9.76277 16.3713 9.71807 14.6537 11.5059C14.5452 11.6208 14.443 11.7485 14.2898 11.9337C14.2898 11.3782 14.2898 10.8993 14.2898 10.4204C12.9808 10.4204 11.6974 10.4204 10.4204 10.4204C10.4204 14.3217 10.4204 18.1974 10.4204 22.086C11.7166 22.086 12.9936 22.086 14.3026 22.086ZM7.7834 22.086C7.7834 18.1783 7.7834 14.2962 7.7834 10.4204C6.48084 10.4204 5.20383 10.4204 3.92043 10.4204C3.92043 14.3153 3.92043 18.1974 3.92043 22.086C5.2166 22.086 6.49361 22.086 7.7834 22.086ZM8.18566 5.85511C8.18566 4.56532 7.13212 3.5054 5.84872 3.51179C4.55894 3.51817 3.49902 4.58448 3.51179 5.86149C3.52456 7.14489 4.55894 8.17927 5.84234 8.18566C7.13212 8.19204 8.17927 7.15128 8.18566 5.85511Z"
+                        fill="currentColor" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_96_277">
+                        <rect width="26" height="26" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg></Link></li>
+              <li><Link href="https://www.facebook.com/chameleoninfotech" target="_blank" className="inline-block hover:text-secondary duration-300"><svg width="26" height="26"
+                    viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M0 22.5863C0 16.1912 0 9.79609 0 3.40098C0.0190802 3.33741 0.0381605 3.27384 0.0508806 3.21027C0.286204 1.9198 0.979452 0.966259 2.15607 0.394132C2.54403 0.203423 2.98924 0.127139 3.40264 0C9.80088 0 16.1991 0 22.5974 0C22.6355 0.0127139 22.6737 0.0381418 22.7182 0.0444988C24.7025 0.375061 26 1.90709 26 3.90954C26 9.96773 26 16.0196 26 22.0777C26 22.3702 25.9746 22.6689 25.9173 22.955C25.523 24.754 24.0157 25.9746 22.1649 25.9809C20.1996 25.9873 18.2407 25.9809 16.2754 25.9809C16.2118 25.9809 16.1419 25.9809 16.0719 25.9809C16.0719 22.9105 16.0719 19.8592 16.0719 16.7888C17.363 16.7888 18.635 16.7888 19.9134 16.7888C20.1678 15.2631 20.4222 13.7565 20.6766 12.2181C19.1311 12.2181 17.5983 12.2181 16.0719 12.2181C16.0719 11.1755 16.0719 10.1584 16.0719 9.12225C17.6111 9.12225 19.1311 9.12225 20.6575 9.12225C20.6575 7.59658 20.6575 6.08362 20.6575 4.55795C20.5685 4.55795 20.4922 4.55795 20.4159 4.55795C18.9912 4.55795 17.5729 4.55795 16.1482 4.55795C13.4834 4.5643 11.4863 6.56675 11.4799 9.23667C11.4799 10.1394 11.4799 11.0484 11.4799 11.9511C11.4799 12.0401 11.4799 12.1291 11.4799 12.2372C10.4432 12.2372 9.44472 12.2372 8.45254 12.2372C8.45254 13.7628 8.45254 15.2758 8.45254 16.8015C9.4638 16.8015 10.4623 16.8015 11.4672 16.8015C11.4672 19.8655 11.4672 22.9169 11.4672 25.9682C11.4291 25.9746 11.4036 25.9873 11.3782 25.9873C8.79599 25.9873 6.2138 26.0254 3.63796 25.9682C2.17515 25.9364 1.08121 25.18 0.419765 23.8768C0.216243 23.4826 0.133562 23.0186 0 22.5863Z"
+                      fill="currentColor" />
+                  </svg></Link></li>
+            </ul>
+          </div>
         </div>
       </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    </section>
+    </>
   )
 }

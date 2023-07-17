@@ -125,12 +125,12 @@ const Footer = () => {
               </ul>
             </div>
           </div>
-          <div class="w-full px-4 pt-16">
-            <ul class="flex justify-center flex-wrap">
-              <li class="px-4 relative after:content-['|'] after:absolute after:right-0"><Link href="/terms-conditions">Terms & Conditions</Link>
+          <div className="w-full px-4 pt-16">
+            <ul className="flex justify-center flex-wrap">
+              <li className="px-4 relative after:content-['|'] after:absolute after:right-0"><Link href="/terms-conditions">Terms & Conditions</Link>
               </li>
-              <li class="px-4 relative after:content-['|'] after:absolute after:right-0"><Link href="/privacy-policy">Privacy Policy</Link></li>
-              <li class="px-4">{currentYear} © Chameleon. All rights reserved. </li>
+              <li className="px-4 relative after:content-['|'] after:absolute after:right-0"><Link href="/privacy-policy">Privacy Policy</Link></li>
+              <li className="px-4">{currentYear} © Chameleon. All rights reserved. </li>
             </ul>
           </div>  
         </div>

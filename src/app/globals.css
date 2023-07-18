@@ -186,3 +186,43 @@
 
 body {@apply bg-[url('/body-bg.svg')] bg-cover font-primary text-sm bg-fixed}
 h1,h2,h3 {@apply font-heading}
+nav li a.active {@apply font-bold text-black}
+.burgerMenu.active span:first-child {@apply rotate-45 top-2}
+.burgerMenu.active span:nth-child(2) {@apply hidden}
+.burgerMenu.active span:last-child {@apply -rotate-45 top-2}
+.js-accordion-title.open svg {@apply rotate-180}
+.slick-list {padding-left: 0 !important;}
+header.active{ @apply fixed top-0 inset-x-0 w-full bg-white z-30 bg-opacity-90 backdrop-blur-[10px] animate-[navbar_0.6s] py-4  }
+
+@keyframes navbar {
+  0% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@media(min-width:767px){
+.slider-clientscard .slick-slide { @apply duration-500 ease-in-out transition-transform relative}
+.slider-clientscard .slick-slide {@apply scale-[0.7] -translate-x-[250px]}
+.slider-clientscard .slick-slide.slick-center+.slick-slide{@apply scale-[0.8] 2xl:-translate-x-[340px] xl:-translate-x-[335px] -translate-x-[300px] z-[2] }
+.slider-clientscard .slick-slide.slick-center+.slick-slide+.slick-slide {@apply scale-[0.7] xl:-translate-x-[640px] -translate-x-[620px] z-[1]}
+.slider-clientscard .slick-slide.slick-active { @apply scale-[0.8] translate-x-[250px] }
+.slider-clientscard .slick-slide.slick-center { @apply scale-100 2xl:-translate-x-20 xl:-translate-x-10 -translate-x-8 z-[3]}
+.slider-clientscard .slick-center:after{ @apply opacity-0 m-[10px] p-[10px] }
+}
+
+#filters li span.active{@apply bg-black text-white}
+.portfolioOverflow::-webkit-scrollbar {
+  display: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}

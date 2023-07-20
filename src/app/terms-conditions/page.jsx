@@ -10,7 +10,7 @@ const PrivacyPolicy = () => {
         Chameleon Infotech LLP owns and manages this website, as well as the
         copyright to it. We offer top-notch web and software development
         services to online business owners. The visitor to Chameleon Infotech
-        LLP's website must abide by the terms and conditions of the company.
+        LLP&lsquo;s website must abide by the terms and conditions of the company.
       </p>
       <h4 className="text-secondary font-heading font-bold text-2xl mb-3 mt-10">
         CONDITIONS
@@ -30,7 +30,7 @@ const PrivacyPolicy = () => {
         </li>
         <li className="text-sm sm:text-lg md:text-xl leading-7 text-[#4C4342] capitalize my-5 list-disc">
           The graphics, web content, and all coding will be considered Chameleon
-          Infotech LLP's property.
+          Infotech LLP&lsquo;s property.
         </li>
         <li className="text-sm sm:text-lg md:text-xl leading-7 text-[#4C4342] capitalize my-5 list-disc">
           {" "}
@@ -39,7 +39,7 @@ const PrivacyPolicy = () => {
           it without the knowledge of Chameleon Infotech LLP.
         </li>
         <li className="text-sm sm:text-lg md:text-xl leading-7 text-[#4C4342] capitalize my-5 list-disc">
-          Any legal action taken to enforce copyright against the client's
+          Any legal action taken to enforce copyright against the client&lsquo;s
           submitted content and materials will not be our responsibility in any
           way.
         </li>

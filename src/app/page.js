@@ -147,7 +147,7 @@ export default function Home() {
           <div className="flex mt-11 lg:max-w-[600px] lg:ml-auto">
             <span
               className="w-[60px] inline-flex justify-center items-center px-[25px] bg-[#D9F5FF] rounded-[10px] text-[28px] font-bold">1</span>
-            <p className="text-sm md:text-lg pl-6 text-primary">You can rest assured that we will plan and execute a professional work process for your project. We'll fully examine the project & make an offer for suitable solutions.</p>
+            <p className="text-sm md:text-lg pl-6 text-primary">You can rest assured that we will plan and execute a professional work process for your project. We&lsquo;ll fully examine the project & make an offer for suitable solutions.</p>
           </div>
           <div className="flex mt-11 lg:max-w-[600px] lg:ml-auto">
             <span
@@ -157,7 +157,7 @@ export default function Home() {
           <div className="flex mt-11 lg:max-w-[600px] lg:ml-auto">
             <span
               className="w-[60px] inline-flex justify-center items-center px-[25px] bg-[#FFD8CE] rounded-[10px] text-[28px] font-bold">3</span>
-            <p className="text-sm md:text-lg pl-6 text-primary">We'll ensure you are aware of all deals and that the cost of implementing the project is clearly defined. Additionally, we promise to operate under a white label model.</p>
+            <p className="text-sm md:text-lg pl-6 text-primary">We&lsquo;ll ensure you are aware of all deals and that the cost of implementing the project is clearly defined. Additionally, we promise to operate under a white label model.</p>
           </div>
         </div>
       </div>

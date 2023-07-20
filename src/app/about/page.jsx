@@ -58,13 +58,13 @@ const About = () => {
               building clean, unique, and functional websites and applications.
               We offer various services, including web development, graphic
               design, responsive design, domains, and web hosting. We guarantee
-              you'll love the work we do for you. See what we can do for you
+              you&lsquo;ll love the work we do for you. See what we can do for you
               without any obligations.
             </p>
             <p className="text-base sm:text-lg md:text-xl leading-7 text-[#4C4342] capitalize">
               Chameleon Infotech LLP offers a wide range of web services, from
               custom website design to complex internet system development. We
-              base our services on understanding our clients' business needs and
+              base our services on understanding our clients&lsquo; business needs and
               providing dependable solutions. We have delivered IT projects of
               varying complexities for our very demanding and internet-savvy
               clients spread across the globe.

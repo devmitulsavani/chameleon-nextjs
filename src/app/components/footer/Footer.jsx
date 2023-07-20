@@ -1,5 +1,5 @@
 "use client"
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Link from "next/link";
 import Image from "next/image";
 
@@ -27,6 +27,35 @@ const Footer = () => {
     },
   ];
   const currentYear = new Date().getFullYear();
+
+  const [isMobileView, setIsMobileView] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobileView(window.matchMedia('(max-width: 991px)').matches);
+    };
+
+    handleResize();
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  const toggleAccordion = (event) => {
+    const accordionContent = event.currentTarget.nextElementSibling;
+    const isOpen = event.currentTarget.classList.contains('open');
+
+    if (isOpen) {
+      event.currentTarget.classList.remove('open');
+      accordionContent.style.display = 'none';
+    } else {
+      event.currentTarget.classList.add('open');
+      accordionContent.style.display = 'block';
+    }
+  };
   return (
     <>
       <footer className="container text-base py-12">
@@ -68,13 +97,13 @@ const Footer = () => {
             </ul>
           </div>
           <div className="w-full lg:w-1/3 px-4 mt-8 lg:mt-0 lg:pb-0 pb-4 relative lg:after:content-none after:absolute after:bottom-0 after:h-[1px] after:inset-x-0 after:bg-primary after:bg-opacity-30 after:w-72 md:after:w-10/12 after:mx-auto">
-            <div className="lg:max-w-[60px] mx-auto max-w-xs md:max-w-full">
-              <h5 className="text-lg font-medium text-black font-heading lg:mb-5 flex justify-between js-accordion-title mb-0">
-                Page <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 lg:hidden duration-500" fill="none"
+            <div className={`lg:max-w-[60px] mx-auto max-w-xs md:max-w-full ${isMobileView ? 'accordion-content' : ''}`}>
+              <h5 className="text-lg font-medium text-black font-heading lg:mb-5 flex justify-between js-accordion-title mb-0" onClick={toggleAccordion}>
+                Page {isMobileView && <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 lg:hidden duration-500" fill="none"
                   viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-                </svg></h5>
-              <ul className="text-primary font-medium space-y-4 accordion-content pt-4 lg:pt-0">
+                </svg>}</h5>
+              <ul className={`text-primary font-medium space-y-4 ${isMobileView ? 'pt-4 hidden' : ''}`}>
               {links.map((link, index) => (
                 <li key={`${link.id}-${index}`}>
                   <Link href={link.url} className={`hover:text-black duration-300`}>
@@ -86,13 +115,13 @@ const Footer = () => {
             </div>
           </div>
           <div className="w-full lg:w-1/3 px-4 lg:py-0 pt-4">
-            <div className="lg:max-w-full mx-auto max-w-xs md:max-w-full">
-              <h5 className="text-lg font-medium text-black font-heading lg:mb-5 flex justify-between js-accordion-title mb-0">
-                Contact <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 lg:hidden duration-500" fill="none"
+            <div className={`lg:max-w-full mx-auto max-w-xs md:max-w-full ${isMobileView ? 'accordion-content' : ''}`}>
+              <h5 className="text-lg font-medium text-black font-heading lg:mb-5 flex justify-between js-accordion-title mb-0" onClick={toggleAccordion}>
+                Contact {isMobileView && <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 lg:hidden duration-500" fill="none"
                   viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-                </svg></h5>
-              <ul className="text-primary font-medium space-y-4 accordion-content pt-4 lg:pt-0">
+                </svg>}</h5>
+              <ul className={`text-primary font-medium space-y-4 ${isMobileView ? 'pt-4 hidden' : ''}`}>
                 <li className="flex"><svg className="mt-1 w-3 h-5" viewBox="0 0 11 17" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -130,7 +159,7 @@ const Footer = () => {
               <li className="px-4 relative after:content-['|'] after:absolute after:right-0"><Link href="/terms-conditions">Terms & Conditions</Link>
               </li>
               <li className="px-4 relative after:content-['|'] after:absolute after:right-0"><Link href="/privacy-policy">Privacy Policy</Link></li>
-              <li className="px-4">{currentYear} © Chameleon. All rights reserved. </li>
+              <li className="px-4">©{currentYear} Chameleon. All rights reserved. </li>
             </ul>
           </div>  
         </div>

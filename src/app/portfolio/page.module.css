@@ -1,0 +1,23 @@
+.grid{
+    column-count: 3;
+    column-gap: 30px;
+    margin-bottom: 40px;
+    width: 100%;
+}
+.protItems{
+    -webkit-column-break-inside: avoid;
+    -moz-column-break-inside: avoid;
+    break-inside: avoid;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+@media (max-width:767px) {
+    .grid{
+        column-count: 2;
+        column-gap: 20px;
+    }
+    .protItems{
+        margin-bottom: 15px;
+    }
+}

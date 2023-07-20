@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { PriceEstimate } from "../components/priceEstimate/PriceEstimate";
 import {YourPortfolioItems} from "./data";
+import styles from "./page.module.css"
 
 export const metadata = {
   title: "Portfolio",
@@ -99,7 +100,7 @@ const Portfolio = () => {
             className={`portfolio ${activeFilter}`}
             data-filter={activeFilter}
           >
-            <div className="flex flex-wrap -mx-4">
+            <div className={styles.grid}>
               {portfolioItemsToShow.map(
                 (item, index) =>
                   // Check the category and visibility before rendering each item
@@ -107,7 +108,7 @@ const Portfolio = () => {
                   index < visibleItems && (
                     <div
                       key={index}
-                      className="px-4 w-full md:w-1/2 lg:w-1/3 py-6 prot-items"
+                      className={styles.protItems}
                     >
                       {/* Render the item's content here */}
                       <Image
